@@ -1,0 +1,12 @@
+{
+  "key": 0,
+  "enabled": false,
+  "hidden": false,
+  "Vanilla": "false",
+  "Items": "true",
+  "Sprint": "true",
+  "SoulSand": "true",
+  "Slow%": "4.0",
+  "Timer": "2.0",
+  "Mode": "AAC5"
+}

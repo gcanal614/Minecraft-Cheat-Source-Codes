@@ -1,0 +1,88 @@
+package me.injusttice.neutron.utils.alt;
+
+import java.net.Proxy;
+
+import me.injusttice.neutron.NeutronMain;
+import com.mojang.authlib.Agent;
+import com.mojang.authlib.exceptions.AuthenticationException;
+import com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService;
+import com.mojang.authlib.yggdrasil.YggdrasilUserAuthentication;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.Session;
+
+public final class AltLoginThread
+extends Thread {
+    private Alt alt;
+    private String status;
+    private Minecraft mc = Minecraft.getMinecraft();
+    boolean mojang;
+    String username;
+    String password;
+
+    public AltLoginThread(String username, String password) {
+        super("Alt Login Thread");
+        this.username = username;
+        this.password = password;
+        this.status = (Object)((Object)EnumChatFormatting.GRAY) + "Waiting...";
+    }
+
+    public AltLoginThread(Alt alt) {
+        super("Alt Login Thread");
+        this.mc = Minecraft.getMinecraft();
+        this.alt = alt;
+        this.status = EnumChatFormatting.GRAY + "Waiting...";
+        mojang = true;
+    }
+
+    public AltLoginThread(String username, String password, boolean moijang){
+        this.username = username;
+        this.password = password;
+        this.mojang = moijang;
+        this.alt = new Alt(username, password);
+    }
+
+    private Session createSession(String username, String password) {
+        YggdrasilAuthenticationService service = new YggdrasilAuthenticationService(Proxy.NO_PROXY, "");
+        YggdrasilUserAuthentication auth = (YggdrasilUserAuthentication)service.createUserAuthentication(Agent.MINECRAFT);
+        auth.setUsername(username);
+        auth.setPassword(password);
+        try {
+            auth.logIn();
+            return new Session(auth.getSelectedProfile().getName(), auth.getSelectedProfile().getId().toString(), auth.getAuthenticatedToken(), "mojang");
+        }
+        catch (AuthenticationException localAuthenticationException) {
+            localAuthenticationException.printStackTrace();
+            return null;
+        }
+    }
+
+    public String getStatus() {
+        return this.status;
+    }
+
+    @Override
+    public void run() {
+        if (this.password.equals("")) {
+            this.mc.session = new Session(this.username, "", "", "mojang");
+            this.status = (Object)((Object)EnumChatFormatting.GREEN) + "Logged in. (" + this.username + " - offline name)";
+            return;
+        }
+        this.status = (Object)((Object)EnumChatFormatting.YELLOW) + "Logging in...";
+        Session auth = this.createSession(this.username, this.password);
+        if (auth == null) {
+            this.status = (Object)((Object)EnumChatFormatting.RED) + "Login failed!";
+        } else {
+            AltManager altManager = NeutronMain.instance.altManager;
+            AltManager.lastAlt = new Alt(this.username, this.password);
+            this.status = (Object)((Object)EnumChatFormatting.GREEN) + "Logged in. (" + auth.getUsername() + ")";
+            this.mc.session = auth;
+        }
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+}
+

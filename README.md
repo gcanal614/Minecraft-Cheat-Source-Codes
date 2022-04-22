@@ -5,8 +5,10 @@
 - format: Client Name (Version/Build + (DEV/Beta))
 - total client amount: 48
 
+AlphaSense (Beta)\
 Alphentus (1D)\
 Astomero (Unknown version)\
+Astronicy (V1.0.0)\
 Async (V1.0.0)\
 Boomerware (V6.9)\
 CloverHook (829 DEV)\
@@ -17,12 +19,16 @@ CZF (B13)\
 Diablo (Unknown version)\
 Drunk (V0.39)\
 Eris (V0.1)\
+Exhibition (V5.0)\
+Exusiai (unknown)\
 Fanta (V13)\
+Fanta (V14)\
 Flux (V39)\
 Focus (V023457)\
 Hanabi (V1.5.1)\
 Hawk (V1.5 Beta)\
 Helium (B41420)\
+Hime (V1.0)\
 Invasion (V0.3 Beta)\
 Ketamine (V5.7)\
 Koks (V1)\
@@ -34,6 +40,7 @@ Mega (V1.2.0)\
 Metaware (Unknown version)\
 Monsoon (V1.3)\
 MoonX (Unknown version)\
+Neutron (B00001)\
 Nevehook (V1.4, B161021)\
 Novoline (V112321)\
 Radium (V0.4)\
@@ -46,13 +53,16 @@ Sensation (V2.0.1)\
 Sight (V2.3)\
 Rise (V0.90)\
 SmokeX (Unknown version)\
+StellarWare (unkown)\
 Strife (B210822 DEV)\
 Summer (V5)\
 Thunderware (B1.0)\
 Tired (B70)\
 UwUWare (V1.0.2)\
 Vergo (B1.02)\
+WoolWare (B7)\
 Zamorozka (V5.0.3)\
+ZeroSense (B0.73)\
 Tenacity (V4.0): \
 https://workupload.com/file/mZvmV73XHF6 \
 https://cdn.discordapp.com/attachments/942912680992313436/956203692296634368/src.zip \

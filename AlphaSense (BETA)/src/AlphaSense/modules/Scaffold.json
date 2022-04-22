@@ -1,0 +1,15 @@
+{
+  "key": 45,
+  "enabled": false,
+  "hidden": false,
+  "Tower": "true",
+  "Rotation Mode": "TICK",
+  "Timer": "1.1",
+  "Speed Modifier": "false",
+  "Modifier Value": "0.5",
+  "Item Spoof": "true",
+  "Alow Sprint": "true",
+  "No Swing": "true",
+  "KeepY": "true",
+  "Redesky Bypass": "true"
+}

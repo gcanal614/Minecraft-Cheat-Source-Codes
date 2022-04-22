@@ -1,0 +1,15 @@
+{
+  "key": 0,
+  "enabled": true,
+  "hidden": true,
+  "Start Color": "-16029696",
+  "Finish Color": "-15531853",
+  "Border": "RIGHT",
+  "Notifications": "true",
+  "RAINBOW": "true",
+  "Background": "true",
+  "Font": "false",
+  "Background Alpha": "141",
+  "Border Width": "2.75",
+  "HudFont": "SF_UI_Display_Regular-0-18-true-true"
+}

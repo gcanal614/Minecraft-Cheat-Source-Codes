@@ -1,0 +1,21 @@
+{
+  "key": 19,
+  "enabled": false,
+  "hidden": false,
+  "Mode": "SWITCH",
+  "Smooth Value": "100",
+  "MultiTargets": "3",
+  "MultiFOV": "75",
+  "CPS": "7-11",
+  "Range": "6.9",
+  "Max Targets": "1",
+  "Switch Speed": "100",
+  "Players": "true",
+  "Animals": "true",
+  "Monsters": "true",
+  "Invisibles": "true",
+  "AutoBlock": "true",
+  "Teams": "false",
+  "Through Walls": "true",
+  "Antibot check": "false"
+}

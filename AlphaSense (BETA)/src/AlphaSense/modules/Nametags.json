@@ -1,0 +1,13 @@
+{
+  "key": 0,
+  "enabled": true,
+  "hidden": false,
+  "Passives": "true",
+  "Health": "true",
+  "Armor": "true",
+  "Distance": "false",
+  "Color": "-5250320",
+  "BackdropMode": "NONE",
+  "Font": "false",
+  "NameFont": "Arial-0-16-true-true"
+}
