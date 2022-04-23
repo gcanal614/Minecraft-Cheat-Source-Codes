@@ -3,7 +3,7 @@
  Minecraft "hacked" clients, most of them are from masterof13fps.
 ## List
 - format: Client Name (Version/Build + (DEV/Beta))
-- total client amount: 48
+- total client amount: 62
 
 AlphaSense (Beta)\
 Alphentus (1D)\
@@ -11,12 +11,14 @@ Astomero (Unknown version)\
 Astronicy (V1.0.0)\
 Async (V1.0.0)\
 Boomerware (V6.9)\
+BozoWare (B220331)\
 CloverHook (829 DEV)\
 Corrosion (V2.0.0)\
 Crispy (B3.67,V2.0)\
 Cupid (V0.1)\
 CZF (B13)\
 Diablo (Unknown version)\
+DortWare (1.5.0)\
 Drunk (V0.39)\
 Eris (V0.1)\
 Exhibition (V5.0)\
@@ -49,14 +51,17 @@ Remix (V1)\
 Resolute (V211026)\
 Rich Client Free (#0002)\
 Rich Client Premium (V0.1)\
+Ries (DEV)\
 Sensation (V2.0.1)\
 Sight (V2.3)\
+Sleek (unknown)\
 Rise (V0.90)\
 SmokeX (Unknown version)\
 StellarWare (unkown)\
 Strife (B210822 DEV)\
 Summer (V5)\
 Thunderware (B1.0)\
+Tifality (BETA)\
 Tired (B70)\
 UwUWare (V1.0.2)\
 Vergo (B1.02)\
@@ -71,6 +76,7 @@ https://cdn.discordapp.com/attachments/942912680992313436/956203692296634368/src
 - G8LOL
 - Innominate
 - jeremypelletier
+- SRT
 - decausedinside
 - Exeos
 - Fxy
