@@ -61,6 +61,7 @@ StellarWare (unkown)\
 Strife (B210822 DEV)\
 Summer (V5)\
 Thunderware (B1.0)\
+Thunderware (B1.07)\
 Tifality (BETA)\
 Tired (B70)\
 UwUWare (V1.0.2)\
