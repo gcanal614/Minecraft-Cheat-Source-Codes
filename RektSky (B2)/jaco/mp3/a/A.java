@@ -1,48 +1,48 @@
 package jaco.mp3.a;
 
-public final class A extends C
+final class a extends t
 {
-    private short[] a;
-    private int[] b;
-    private int c;
+    private float j;
     
-    public A(int i, final int c) {
-        this.a = new short[2304];
-        this.b = new int[2];
-        this.c = c;
-        for (i = 0; i < c; ++i) {
-            this.b[i] = (short)i;
+    public a(final int n) {
+        super(n);
+    }
+    
+    @Override
+    public final void a(final z z, final D d, final o o) {
+        super.a(z, d, o);
+    }
+    
+    @Override
+    public final void a(final z z, final D d) {
+        if (this.d != 0) {
+            this.e = a.m[z.d(6)];
+            this.j = a.m[z.d(6)];
         }
     }
     
-    public final short[] a() {
-        return this.a;
-    }
-    
-    public final int b() {
-        return this.b[0];
+    @Override
+    public final boolean a(final z z) {
+        return super.a(z);
     }
     
     @Override
-    public final void a(final int n, final short n2) {
-        this.a[this.b[n]] = n2;
-        final int[] b = this.b;
-        b[n] += this.c;
-    }
-    
-    @Override
-    public final void a(final int n, final float[] array) {
-        int n2 = this.b[n];
-        float n3;
-        float n4;
-        for (int i = 0; i < 32; this.a[n2] = (short)(((n3 = array[i++]) > 32767.0f) ? (n4 = 32767.0f) : ((n3 < -32767.0f) ? (n4 = -32767.0f) : (n4 = n3))), n2 += this.c) {}
-        this.b[n] = n2;
-    }
-    
-    @Override
-    public final void c() {
-        for (int i = 0; i < this.c; ++i) {
-            this.b[i] = (short)i;
+    public final boolean a(final int n, final y y, final y y2) {
+        if (this.d != 0) {
+            this.g = this.g * this.h + this.i;
+            if (n == 0) {
+                final float n2 = this.g * this.e;
+                final float n3 = this.g * this.j;
+                y.a(n2, this.c);
+                y2.a(n3, this.c);
+            }
+            else if (n == 1) {
+                y.a(this.g * this.e, this.c);
+            }
+            else {
+                y.a(this.g * this.j, this.c);
+            }
         }
+        return true;
     }
 }

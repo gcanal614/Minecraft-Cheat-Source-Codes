@@ -3,10 +3,11 @@
  Minecraft "hacked" clients, most of them are from masterof13fps.
 ## List
 - format: Client Name (Version/Build + (DEV/Beta))
-- total client amount: 62
+- total client amount: 65
 
 AlphaSense (Beta)\
 Alphentus (1D)\
+Arctic (B1)\
 Astomero (Unknown version)\
 Astronicy (V1.0.0)\
 Async (V1.0.0)\
@@ -27,6 +28,7 @@ Fanta (V13)\
 Fanta (V14)\
 Flux (V39)\
 Focus (V023457)\
+Hache (V0.4.9)\
 Hanabi (V1.5.1)\
 Hawk (V1.5 Beta)\
 Helium (B41420)\
@@ -44,6 +46,7 @@ Monsoon (V1.3)\
 MoonX (Unknown version)\
 Neutron (B00001)\
 Nevehook (V1.4, B161021)\
+Noble (B220226)\
 Novoline (V112321)\
 Radium (V0.4)\
 RektSky (B2)\

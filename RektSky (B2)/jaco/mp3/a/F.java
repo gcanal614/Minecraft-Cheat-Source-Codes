@@ -1,73 +1,61 @@
 package jaco.mp3.a;
 
-import jaco.mp3.a.a.*;
-import javax.sound.sampled.*;
-
-public final class F extends a
+public final class f
 {
-    private SourceDataLine a;
-    private AudioFormat b;
-    private byte[] c;
+    private final float[] a;
     
-    public F() {
-        this.a = null;
-        this.b = null;
-        this.c = new byte[4096];
+    static {
+        new f();
     }
     
-    @Override
-    protected final void b() {
-        if (this.a != null) {
-            this.a.close();
-        }
+    public f() {
+        this.a = new float[32];
     }
     
-    @Override
-    protected final void b(final short[] array, final int n, final int n2) {
-        if (this.a == null) {
-            final RuntimeException ex = null;
-            try {
-                if (this.b == null) {
-                    final b e = this.e();
-                    this.b = new AudioFormat((float)e.a(), 16, e.b(), true, false);
-                }
-                final Line line;
-                if ((line = AudioSystem.getLine(new DataLine.Info(SourceDataLine.class, this.b))) instanceof SourceDataLine) {
-                    (this.a = (SourceDataLine)line).open(this.b);
-                    this.a.start();
-                }
+    public final void a(final f f) {
+        if (f != this) {
+            final f f2 = this;
+            final float[] a = f.a;
+            this = f2;
+            final f f3 = f2;
+            for (int i = 0; i < 32; ++i) {
+                f3.a[i] = 0.0f;
             }
-            catch (RuntimeException ex) {}
-            catch (LinkageError ex) {}
-            catch (LineUnavailableException ex) {}
-            if (this.a == null) {
-                throw new q("cannot obtain source audio line", ex);
+            for (int n = (a.length > 32) ? 32 : a.length, j = 0; j < n; ++j) {
+                final float[] a2 = this.a;
+                final int n2 = j;
+                float n4 = 0.0f;
+                Label_0100: {
+                    final float n3;
+                    if ((n3 = a[j]) != Float.NEGATIVE_INFINITY) {
+                        if (n3 > 1.0f) {
+                            n4 = 1.0f;
+                            break Label_0100;
+                        }
+                        if (n3 < -1.0f) {
+                            n4 = -1.0f;
+                            break Label_0100;
+                        }
+                    }
+                    n4 = n3;
+                }
+                a2[n2] = n4;
             }
         }
-        this.a.write(this.c(array, n, n2), 0, n2 << 1);
     }
     
-    private byte[] c(final short[] array, int n, int n2) {
-        final F f = this;
-        final int n3 = n2 << 1;
-        this = f;
-        if (f.c.length < n3) {
-            this.c = new byte[n3 + 1024];
+    final float[] a() {
+        final float[] array = new float[32];
+        for (int i = 0; i < 32; ++i) {
+            final float[] array2 = array;
+            final int n = i;
+            final float n2;
+            float n3 = 0.0f;
+            if ((n2 = this.a[i]) != Float.NEGATIVE_INFINITY) {
+                n3 = (float)Math.pow(2.0, n2);
+            }
+            array2[n] = n3;
         }
-        final byte[] c = this.c;
-        int n4 = 0;
-        while (n2-- > 0) {
-            final short n5 = array[n++];
-            c[n4++] = (byte)n5;
-            c[n4++] = (byte)(n5 >>> 8);
-        }
-        return c;
-    }
-    
-    @Override
-    protected final void d() {
-        if (this.a != null) {
-            this.a.drain();
-        }
+        return array;
     }
 }

@@ -1,38 +1,93 @@
 package jaco.mp3.a;
 
-final class B extends w implements k
+public final class b
 {
-    public B() {
+    private static final g a;
+    private C b;
+    private y c;
+    private y d;
+    private c e;
+    private B f;
+    private w g;
+    private int h;
+    private int i;
+    private f j;
+    private g k;
+    private boolean l;
+    
+    static {
+        a = new g();
     }
     
-    @Override
-    protected final void b() {
-        if (this.c == 3) {
-            for (int i = 0; i < this.d; ++i) {
-                this.e[i] = new i(i);
-            }
-            return;
-        }
-        if (this.c == 1) {
-            int j;
-            for (j = 0; j < this.b.k(); ++j) {
-                this.e[j] = new E(j);
-            }
-            while (j < this.d) {
-                this.e[j] = new v(j);
-                ++j;
-            }
-            return;
-        }
-        for (int k = 0; k < this.d; ++k) {
-            this.e[k] = new E(k);
+    public b() {
+        this(null);
+    }
+    
+    private b(g a) {
+        this.j = new f();
+        a = jaco.mp3.a.b.a;
+        this.k = a;
+        final f a2;
+        if ((a2 = this.k.a()) != null) {
+            this.j.a(a2);
         }
     }
     
-    @Override
-    protected final void c() {
-        for (int i = 0; i < this.d; ++i) {
-            ((i)this.e[i]).a(this.a, this.f);
+    public final C a(final D d, final z z) {
+        if (!this.l) {
+            final float n = 32700.0f;
+            final int i = (d.f() == 3) ? 1 : 2;
+            if (this.b == null) {
+                this.b = new A(d.e(), i);
+            }
+            this.j.a();
+            this.c = new y(0, n);
+            if (i == 2) {
+                this.d = new y(1, n);
+            }
+            this.i = i;
+            this.h = d.e();
+            this.l = true;
         }
+        final int b = d.b();
+        this.b.c();
+        final int n2 = b;
+        k k = null;
+        switch (n2) {
+            case 3: {
+                if (this.e == null) {
+                    this.e = new c(z, d, this.c, this.d, this.b, 0);
+                }
+                k = this.e;
+                break;
+            }
+            case 2: {
+                if (this.f == null) {
+                    (this.f = new B()).a(z, d, this.c, this.d, this.b, 0);
+                }
+                k = this.f;
+                break;
+            }
+            case 1: {
+                if (this.g == null) {
+                    (this.g = new w()).a(z, d, this.c, this.d, this.b, 0);
+                }
+                k = this.g;
+                break;
+            }
+        }
+        if (k == null) {
+            throw new u(513, null);
+        }
+        k.a();
+        return this.b;
+    }
+    
+    public final int a() {
+        return this.h;
+    }
+    
+    public final int b() {
+        return this.i;
     }
 }
